@@ -1,276 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Política de Privacidade do aplicativo FinSafe - Saiba como seus dados são coletados, usados e protegidos.">
-    <meta name="keywords" content="FinSafe, Política de Privacidade, Privacidade, Dados Pessoais">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Política de Privacidade do FinSafe, aplicativo offline de controle financeiro pessoal.">
     <meta name="author" content="Thiago Evânio">
-    <title>Política de Privacidade - FinSafe</title>
+    <meta name="theme-color" content="#102a43">
+    <link rel="canonical" href="https://thiagoevanio.github.io/finsafe-privacidade/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Política de Privacidade — FinSafe">
+    <meta property="og:description" content="Como o FinSafe protege e trata os dados financeiros mantidos no seu aparelho.">
+    <meta property="og:url" content="https://thiagoevanio.github.io/finsafe-privacidade/">
+    <title>Política de Privacidade — FinSafe</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      :root {
+        color-scheme: light;
+        --background: #edf3f8;
+        --surface: #ffffff;
+        --text: #172b3a;
+        --muted: #526675;
+        --primary: #0b5cab;
+        --accent: #0a7467;
+        --border: #d7e2ea;
+        --focus: #ffbf47;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
+      * { box-sizing: border-box; }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
+      html { scroll-behavior: smooth; }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-        }
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
 
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+      a { color: var(--primary); }
+      a:hover { text-decoration-thickness: 2px; }
+      a:focus-visible, .skip-link:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
 
-        .app-name {
-            color: #764ba2;
-        }
+      .skip-link {
+        position: absolute;
+        top: -5rem;
+        left: 1rem;
+        z-index: 10;
+        border-radius: .5rem;
+        background: var(--text);
+        color: #fff;
+        padding: .75rem 1rem;
+      }
+      .skip-link:focus { top: 1rem; }
 
-        .last-updated {
-            color: #666;
-            font-size: 0.95em;
-            font-style: italic;
-            margin-top: 10px;
-        }
+      .page {
+        width: min(100% - 2rem, 860px);
+        margin: 2rem auto;
+      }
 
-        h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            border-left: 4px solid #764ba2;
-            padding-left: 15px;
-        }
+      header, main, footer {
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
 
-        h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
+      header {
+        border-radius: 1rem 1rem 0 0;
+        padding: clamp(1.5rem, 5vw, 3.5rem);
+        background: linear-gradient(145deg, #102a43, #0b5cab);
+        color: #fff;
+      }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            color: #444;
-        }
+      .eyebrow {
+        margin: 0 0 .5rem;
+        font-size: .85rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
 
-        ul {
-            margin: 15px 0 15px 30px;
-        }
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        line-height: 1.1;
+      }
 
-        li {
-            margin-bottom: 10px;
-            color: #444;
-        }
+      header p { max-width: 42rem; }
+      .updated { margin-bottom: 0; color: #dceeff; }
 
-        strong {
-            color: #333;
-            font-weight: 600;
-        }
+      main { padding: clamp(1.25rem, 5vw, 3.5rem); }
 
-        a {
-            color: #667eea;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.3s ease;
-        }
+      .summary {
+        margin: 0 0 2.5rem;
+        border-left: .35rem solid var(--accent);
+        border-radius: .4rem;
+        background: #eaf7f4;
+        padding: 1rem 1.25rem;
+      }
 
-        a:hover {
-            border-bottom: 1px solid #667eea;
-        }
+      section + section {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
 
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
+      h2 {
+        margin: 0 0 .75rem;
+        color: #123e63;
+        font-size: clamp(1.3rem, 4vw, 1.65rem);
+        line-height: 1.3;
+      }
 
-        .contact-box strong {
-            color: #fff;
-        }
+      p, li { max-width: 72ch; }
+      ul { padding-left: 1.4rem; }
+      li + li { margin-top: .55rem; }
 
-        .contact-box a {
-            color: #fff;
-            font-weight: 600;
-            border-bottom: 1px solid #fff;
-        }
+      .contact {
+        border-radius: .75rem;
+        background: #f2f6fa;
+        padding: 1rem 1.25rem;
+      }
 
-        .contact-box a:hover {
-            opacity: 0.8;
-        }
+      footer {
+        border-top: 0;
+        border-radius: 0 0 1rem 1rem;
+        padding: 1.25rem clamp(1.25rem, 5vw, 3.5rem);
+        color: var(--muted);
+        font-size: .9rem;
+      }
 
-        .highlight-box {
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
+      @media (max-width: 520px) {
+        .page { width: 100%; margin: 0; }
+        header, main, footer { border-left: 0; border-right: 0; border-radius: 0; }
+      }
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-            font-size: 0.9em;
-        }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 25px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            h3 {
-                font-size: 1.2em;
-            }
-
-            body {
-                padding: 10px;
-            }
-        }
-
-        @media print {
-            body {
-                background: #fff;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-                padding: 20px;
-            }
-        }
+      @media print {
+        body { background: #fff; }
+        .page { width: 100%; margin: 0; }
+        header { background: #fff; color: #000; }
+        .updated { color: #333; }
+        header, main, footer { border: 0; }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Política de Privacidade</h1>
-            <h1 class="app-name">FinSafe</h1>
-            <p class="last-updated">Última atualização: 21 de outubro de 2025</p>
-        </header>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div class="page">
+      <header>
+        <p class="eyebrow">FinSafe</p>
+        <h1>Política de Privacidade</h1>
+        <p>Como seus dados são tratados no aplicativo offline de controle financeiro pessoal.</p>
+        <p class="updated"><strong>Última atualização:</strong> 24 de agosto de 2026</p>
+      </header>
 
-        <main>
-            <section>
-                <h2>1. Introdução</h2>
-                <p>Bem-vindo ao FinSafe. Esta Política de Privacidade descreve como suas informações pessoais são coletadas, usadas e protegidas quando você utiliza nosso aplicativo. O FinSafe, desenvolvido por Thiago Evânio, respeita sua privacidade e está comprometido em proteger seus dados.</p>
-                <p>Ao utilizar o FinSafe, você concorda com a coleta e uso de informações de acordo com esta política.</p>
-            </section>
+      <main id="conteudo">
+        <p class="summary"><strong>Resumo:</strong> seus dados financeiros permanecem no seu aparelho. O FinSafe não exige conta, não possui anúncios e não envia seus registros financeiros ao desenvolvedor.</p>
 
-            <section>
-                <h2>2. Coleta de Dados</h2>
-                <p>Para fornecer e aprimorar o serviço, coletamos os seguintes tipos de informações:</p>
+        <section aria-labelledby="responsavel">
+          <h2 id="responsavel">1. Responsável pelo aplicativo</h2>
+          <p>O FinSafe é um aplicativo de controle financeiro pessoal desenvolvido por Thiago Evânio. Esta política descreve o tratamento de dados na versão gratuita e offline distribuída pela Google Play.</p>
+        </section>
 
-                <h3>Dados Coletados Automaticamente</h3>
-                <ul>
-                    <li><strong>Dados de Uso e Desempenho:</strong> Coletamos informações anônimas sobre sua interação com o aplicativo, como funcionalidades acessadas, tempo de uso e relatórios de erros. Esses dados são processados através de ferramentas como Google Analytics for Firebase para nos ajudar a entender como o aplicativo é usado e a identificar oportunidades de melhoria.</li>
-                    <li><strong>Identificadores de Dispositivo:</strong> Para a exibição de anúncios relevantes através do Google AdMob, podemos coletar identificadores de publicidade do seu dispositivo. Esses identificadores são usados para personalizar a publicidade e manter o aplicativo gratuito.</li>
-                </ul>
+        <section aria-labelledby="offline">
+          <h2 id="offline">2. Funcionamento offline e dados locais</h2>
+          <p>O FinSafe não exige conta, login nem servidor próprio. Transações, receitas, despesas, categorias, orçamentos, metas, assinaturas, contas, cartões, tarefas, notas, comprovantes e preferências são mantidos no aparelho.</p>
+          <p>Gráficos, análises, alertas, sugestões de economia e respostas do assistente Fin são calculados localmente. As conversas e o contexto financeiro não são enviados a um serviço externo de inteligência artificial.</p>
+        </section>
 
-                <h3>Dados Armazenados Localmente</h3>
-                <div class="highlight-box">
-                    <p><strong>Informações Financeiras:</strong> Todos os dados que você insere no aplicativo, como transações, metas financeiras, orçamentos e categorias, são armazenados exclusivamente no seu dispositivo. <strong>Nenhuma informação financeira pessoal é transmitida ou armazenada em servidores externos.</strong></p>
-                </div>
-            </section>
+        <section aria-labelledby="coleta">
+          <h2 id="coleta">3. Dados coletados ou compartilhados</h2>
+          <p>O desenvolvedor não recebe, vende nem compartilha os dados financeiros inseridos no FinSafe. O aplicativo não possui anúncios, rastreadores de publicidade, compras no aplicativo ou integração com instituições bancárias. O código do FinSafe não cria perfil remoto nem coleta identificadores de publicidade.</p>
+          <p>A única exceção técnica relevante é o Google ML Kit usado na leitura opcional de comprovantes, descrito na seção 8.</p>
+        </section>
 
-            <section>
-                <h2>3. Uso das Informações</h2>
-                <p>As informações coletadas são utilizadas para as seguintes finalidades:</p>
-                <ul>
-                    <li><strong>Fornecimento e Manutenção do Serviço:</strong> Para operar e manter as funcionalidades do aplicativo, incluindo os recursos premium para assinantes (versão PRO).</li>
-                    <li><strong>Melhoria do Aplicativo:</strong> Para entender como os usuários interagem com o FinSafe, permitindo-nos aprimorar a experiência do usuário, corrigir falhas e desenvolver novos recursos.</li>
-                    <li><strong>Publicidade:</strong> Para exibir anúncios personalizados por meio do Google AdMob, o que nos ajuda a oferecer o aplicativo gratuitamente.</li>
-                    <li><strong>Comunicação:</strong> Para responder a suas solicitações de suporte e outras dúvidas enviadas através do nosso e-mail de contato.</li>
-                </ul>
-            </section>
+        <section aria-labelledby="permissoes">
+          <h2 id="permissoes">4. Permissões do aparelho</h2>
+          <ul>
+            <li><strong>Câmera:</strong> solicitada apenas quando você decide digitalizar um comprovante.</li>
+            <li><strong>Notificações:</strong> usadas, com sua autorização, para lembretes financeiros.</li>
+            <li><strong>Biometria:</strong> usada localmente para proteger áreas privadas do aplicativo.</li>
+          </ul>
+          <p>Essas permissões podem ser negadas ou revogadas nas configurações do Android. As funções não relacionadas continuam disponíveis sempre que tecnicamente possível.</p>
+        </section>
 
-            <section>
-                <h2>4. Compartilhamento de Dados</h2>
-                <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto nas seguintes circunstâncias:</p>
-                <ul>
-                    <li><strong>Provedores de Serviço:</strong> Compartilhamos dados anônimos com provedores de serviços que nos auxiliam na operação do aplicativo, como o Google (AdMob, Analytics, Play Store). Esses provedores têm acesso limitado aos seus dados, apenas para realizar tarefas em nosso nome, e são obrigados a não divulgá-los ou usá-los para outras finalidades. Para mais informações, consulte as políticas de privacidade do Google:
-                        <ul>
-                            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a></li>
-                            <li><a href="https://play.google.com/about/play-terms/index.html" target="_blank" rel="noopener noreferrer">Termos de Serviço do Google Play</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
+        <section aria-labelledby="backup">
+          <h2 id="backup">5. Backup, exportação e compartilhamento</h2>
+          <p>Os backups são criados somente quando você solicita. Eles são criptografados e autenticados com uma chave derivada da senha escolhida e não são enviados automaticamente para a nuvem.</p>
+          <p>Ao exportar ou compartilhar um backup, relatório, planilha ou outro arquivo, você escolhe o aplicativo e o destino pelo menu de compartilhamento do Android. A proteção, retenção e exclusão dessas cópias externas passam a depender de você e do serviço escolhido.</p>
+        </section>
 
-            <section>
-                <h2>5. Segurança dos Dados</h2>
-                <p>A segurança de seus dados é uma prioridade. Todas as informações financeiras inseridas no FinSafe são armazenadas localmente em seu dispositivo e protegidas por mecanismos de segurança do sistema operacional. Utilizamos criptografia para proteger os dados armazenados e garantir que apenas você tenha acesso a eles.</p>
-                <p>Lembre-se, no entanto, que nenhum método de transmissão pela internet ou de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger seus dados, não podemos garantir sua segurança absoluta.</p>
-            </section>
+        <section aria-labelledby="seguranca">
+          <h2 id="seguranca">6. Segurança e retenção</h2>
+          <p>A base financeira permanece no armazenamento privado do aplicativo, protegida pelos controles de acesso e pela criptografia do Android. Segredos e credenciais do cofre usam o armazenamento seguro do aparelho e criptografia autenticada. Nenhum meio eletrônico é infalível, por isso recomendamos manter o Android atualizado e proteger o aparelho com bloqueio de tela.</p>
+          <p>Os dados permanecem no aparelho até que você exclua os registros, use a exclusão completa ou desinstale o aplicativo.</p>
+        </section>
 
-            <section>
-                <h2>6. Seus Direitos de Privacidade</h2>
-                <p>Como todos os seus dados financeiros são armazenados localmente, você tem controle total sobre eles. Você pode acessar, editar ou excluir suas informações diretamente no aplicativo a qualquer momento. Se desinstalar o aplicativo, todos os dados armazenados localmente serão removidos, a menos que você tenha criado um backup manual.</p>
-            </section>
+        <section aria-labelledby="exclusao">
+          <h2 id="exclusao">7. Exclusão dos dados</h2>
+          <p>Você pode apagar registros nas respectivas telas. Para remover todos os dados locais de uma vez, use <strong>Configurações &gt; Apagar todos os dados</strong> no FinSafe. Essa ação exclui a base financeira, preferências, credenciais, comprovantes e backups internos.</p>
+          <p>Também é possível usar <strong>Configurações do Android &gt; Aplicativos &gt; FinSafe &gt; Armazenamento &gt; Limpar dados</strong> ou desinstalar o aplicativo. Arquivos exportados devem ser apagados separadamente no destino onde foram salvos.</p>
+        </section>
 
-            <section>
-                <h2>7. Privacidade Infantil</h2>
-                <p>O FinSafe não se destina a menores de 13 anos. Não coletamos intencionalmente informações de identificação pessoal de crianças. Se você é pai ou responsável e descobre que seu filho nos forneceu informações pessoais, entre em contato conosco para que possamos tomar as medidas necessárias.</p>
-            </section>
+        <section aria-labelledby="mlkit">
+          <h2 id="mlkit">8. Processamento técnico do Google ML Kit</h2>
+          <p>A leitura opcional de comprovantes usa o Google ML Kit. A imagem e o texto reconhecido são processados no aparelho e não são enviados ao desenvolvedor.</p>
+          <p>De acordo com a documentação do Google, o SDK pode transmitir por conexão criptografada informações técnicas do aparelho e do aplicativo, identificadores de instalação, métricas de desempenho e códigos de erro para diagnóstico e análise de uso do serviço. O Google informa que esses dados técnicos não são compartilhados com terceiros. Consulte a <a href="https://developers.google.com/ml-kit/android-data-disclosure">divulgação de dados do ML Kit para Android</a> e os <a href="https://developers.google.com/ml-kit/terms">termos do ML Kit</a>.</p>
+        </section>
 
-            <section>
-                <h2>8. Alterações a Esta Política de Privacidade</h2>
-                <p>Podemos atualizar nossa Política de Privacidade periodicamente. Notificaremos você sobre quaisquer alterações, publicando a nova Política de Privacidade nesta página e atualizando a data da "Última atualização" no topo.</p>
-                <p>Recomendamos que você revise esta Política de Privacidade periodicamente para quaisquer alterações. As alterações a esta Política de Privacidade entram em vigor quando são publicadas nesta página.</p>
-            </section>
+        <section aria-labelledby="contas">
+          <h2 id="contas">9. Contas e privacidade infantil</h2>
+          <p>O FinSafe não cria contas online e, portanto, não mantém uma conta remota a ser excluída. O aplicativo não é direcionado a crianças menores de 13 anos.</p>
+        </section>
 
-            <section>
-                <h2>9. Contato</h2>
-                <div class="contact-box">
-                    <p>Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco pelo e-mail:</p>
-                    <p><strong>E-mail:</strong> <a href="mailto:thiagoevanio12@gmail.com">thiagoevanio12@gmail.com</a></p>
-                </div>
-            </section>
-        </main>
+        <section aria-labelledby="alteracoes">
+          <h2 id="alteracoes">10. Alterações desta política</h2>
+          <p>Se o funcionamento do aplicativo ou o uso de SDKs mudar, esta página e a declaração de segurança de dados da Google Play serão atualizadas antes da distribuição da nova versão. A data no início da política identifica a revisão vigente.</p>
+        </section>
 
-        <footer>
-            <p>&copy; 2025 FinSafe - Desenvolvido por Thiago Evânio. Todos os direitos reservados.</p>
-        </footer>
+        <section aria-labelledby="contato">
+          <h2 id="contato">11. Contato</h2>
+          <div class="contact">
+            <p>Dúvidas sobre privacidade ou solicitações relacionadas ao FinSafe podem ser enviadas para <a href="mailto:thiagoevanio12@gmail.com">thiagoevanio12@gmail.com</a>.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2026 FinSafe — Thiago Evânio.</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
-
